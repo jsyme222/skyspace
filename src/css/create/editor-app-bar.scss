@@ -1,0 +1,29 @@
+@import "../variables.scss";
+
+.editor-bar {
+  > div {
+    background-color: $black;
+    display: flex;
+    justify-content: space-between;
+    > div {
+      display: flex;
+    }
+  }
+  .MuiInputBase-input.MuiInput-input {
+    color: white;
+  }
+  .doc-title {
+    display: flex;
+    align-items: center;
+    margin: 5px;
+    padding: 5px;
+    > p {
+      color: $primary;
+      font-size: 0.9rem;
+      margin-right: 10px;
+      span {
+        color: white;
+      }
+    }
+  }
+}

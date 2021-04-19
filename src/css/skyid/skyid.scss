@@ -1,0 +1,14 @@
+@import "../variables.scss";
+
+.skyid-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    #skyid {
+        font-weight: 400;
+        color: $primary;
+    }
+    img {
+        max-width: 35px;
+    }
+}

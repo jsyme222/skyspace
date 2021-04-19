@@ -1,0 +1,31 @@
+@import "../variables.scss";
+
+.modal-root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  > div {
+    background-color: $black;
+    color: white;
+    max-width: 450px;
+  }
+  &.login {
+    padding: 40px;
+    button {
+      margin: 40px;
+    }
+  }
+
+  .editor-modal-root {
+    display: flex;
+    flex-flow: column;
+    .editor-content {
+      margin: 1rem;
+      min-width: 400px;
+      min-height: 400px;
+    }
+    .MuiButtonGroup-root {
+      margin: 1rem;
+    }
+  }
+}
