@@ -1,0 +1,38 @@
+@import "../variables.scss";
+
+.logo-button {
+    > div {
+        background-size: contain;
+        background-position: 50%;
+        background-repeat: no-repeat;
+    }
+    .version {
+        display: flex;
+        position: absolute;
+        font-weight: 700;
+        color: white;
+        right: 0%;
+        top: 68%;
+        img {
+            max-width: 15px;
+        }
+    }
+    display: flex;
+    flex-flow: column;
+    margin: 0 auto;
+    h1 {
+      color: $primary;
+      margin-bottom: 0;
+      margin-top: 0;
+      font-size: 3.25rem;
+      text-decoration: underline;
+      > span {
+        color: white;
+      }
+    }
+    p {
+      font-size: 0.85rem;
+      color: white;
+      margin-top: 0;
+    }
+}

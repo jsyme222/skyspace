@@ -1,0 +1,15 @@
+@import "../variables.scss";
+
+.post-list-root {
+    .post-card {
+        width: 600px;
+        margin: 1rem auto;
+        @media(max-width: 767px){
+            width: 100%;
+            margin: 0 auto;
+        }
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

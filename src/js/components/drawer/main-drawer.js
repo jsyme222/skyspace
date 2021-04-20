@@ -1,6 +1,5 @@
 import {
   Button,
-  ButtonBase,
   Divider,
   Drawer,
   List,
@@ -8,14 +7,15 @@ import {
   ListItemIcon,
   ListItemText,
 } from "@material-ui/core";
-import { Create, FindInPage } from "@material-ui/icons";
+import { Create, FindInPage, Person } from "@material-ui/icons";
 import { useAtom } from "jotai";
 import {
   activeComponent,
   authenticated,
   drawerOpen,
 } from "../../data/jotai/Atoms";
-import ButtonGroup from "./menu-button-group/menu-button-group";
+import Logo from "../buttons/logo";
+import ButtonGroup from "../buttons/menu-button-group/menu-button-group";
 
 export default function MainDrawer() {
   // eslint-disable-next-line
@@ -32,14 +32,7 @@ export default function MainDrawer() {
       open={auth && open}
     >
       <div className={"menu"}>
-        <ButtonBase onClick={() => setActiveComp("dashboard")}>
-          <h1>
-            SKY<span>space</span>
-          </h1>
-          <p>
-            Create your space.
-          </p>
-        </ButtonBase>
+        <Logo />
         <Divider />
         <ButtonGroup setOpen={setOpen} />
         <List className={"menu-items"}>
@@ -54,6 +47,12 @@ export default function MainDrawer() {
               <FindInPage />
             </ListItemIcon>
             <ListItemText>Discover</ListItemText>
+          </ListItem>
+          <ListItem component={Button} onClick={() => setActiveComp("my-posts")}>
+            <ListItemIcon>
+              <Person />
+            </ListItemIcon>
+            <ListItemText>My Posts</ListItemText>
           </ListItem>
         </List>
       </div>

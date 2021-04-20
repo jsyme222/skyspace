@@ -10,8 +10,12 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  .app-body {
+    min-width: 75%;
+    margin: 0 auto;
+  }
   .menu-button {
-    position: absolute;
+    position: fixed;
     top: 2rem;
     left: 2rem;
   }
@@ -28,25 +32,6 @@
       min-width: 250px;
       // background-color: $black !important;
       height: 100%;
-      > button {
-        display: flex;
-        flex-flow: column;
-        margin: 0 auto;
-        h1 {
-          color: $primary;
-          margin-bottom: 0;
-          margin-top: 0;
-          font-size: 3.25rem;
-          > span {
-            color: white;
-          }
-        }
-        p {
-          font-size: 0.85rem;
-          color: white;
-          margin-top: 0;
-        }
-      }
       .submenu {
         width: 90%;
         margin: 0 auto;

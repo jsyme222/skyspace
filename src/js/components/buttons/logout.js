@@ -1,9 +1,10 @@
 import { Button, IconButton, Tooltip } from "@material-ui/core";
 import { Lock } from "@material-ui/icons";
-import buildSkyid from "../skyid/skyid";
+import SkyID from "skyid";
+// import buildSkyid from "../skyid/skyid";
 
 export default function Logout({ iconOnly }) {
-  const skyid = buildSkyid();
+  const skyid = new SkyID("SkySpace");
 
   const skyidLogout = () => {
     skyid.sessionDestroy();

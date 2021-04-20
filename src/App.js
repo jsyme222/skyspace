@@ -16,6 +16,8 @@ import {
 } from "./js/data/jotai/Atoms";
 import EditorModal from "./js/components/modals/editor-modal/editor-modal";
 import CreateComponent from "./js/components/create/create-component";
+import DiscoverComponent from "./js/components/discover/discover-component";
+import MyPosts from "./js/components/my-posts/my-posts";
 
 function App() {
   const [config, setConfig] = useAtom(configAtom);
@@ -40,9 +42,10 @@ function App() {
         <Menu />
       </IconButton>
       <div className={"app-body"}>
-        {activeComp==="dashboard"&&<h1>{config && config.test}</h1>}
+        {activeComp==="dashboard"&&<h1>SkySpace v{config && config.version}</h1>}
         {activeComp==="create"&&<CreateComponent />}
-        {activeComp==="discover"&&<h1>Discover</h1>}
+        {activeComp==="discover"&&<DiscoverComponent />}
+        {activeComp==="my-posts"&&<MyPosts />}
       </div>
       <MainDrawer />
       <LoginModal />
